@@ -1,0 +1,25 @@
+{
+  "name": "tp-enujs",
+  "version": "1.0.0",
+  "description": "tp js sdk for enu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TP-Lab/tp-enujs.git"
+  },
+  "keywords": [
+    "TokenPocket"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TP-Lab/tp-enujs/issues"
+  },
+  "homepage": "https://github.com/TP-Lab/tp-enujs#readme",
+  "dependencies": {
+    "promise": "^8.0.1"
+  }
+}
