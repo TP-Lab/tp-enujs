@@ -11,7 +11,7 @@ Javascript SDK for TokenPocket ENU Dapp.
 
 # tp-js-sdk
 
-如果你寻找EOS底层的sdk 或 更通用的sdk 请查看这里：
+其他底层的Dapp 请查看：
 
 [tp-eosjs](https://github.com/TP-Lab/tp-eosjs)
 
@@ -33,10 +33,18 @@ Open your site in TokenPocket as a Dapp.
 In About Page, click the logo 8 times to open the develop mode. Then you can add your url in Dapp Store.
 
 
-
+Npm
 ```javascript
 var tp = require('tp-enujs')
 console.log(tp.isConnected());
+```
+
+Browser
+```html
+<script src="./dist/tp.js"></script>
+<script>
+    console.log(tp.isConnected());
+</script>
 ```
 
 <!-- TOC -->
