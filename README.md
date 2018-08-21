@@ -64,6 +64,7 @@ Browser
     - [2.5 tp.invokeQRScanner](#25-tpinvokeqrscanner)
     - [2.6 tp.getCurrentWallet](#26-tpgetcurrentwallet)
     - [2.7 tp.getWallets](#27-tpgetwallets)
+    - [2.8 tp.sign](#28-tpsign)
 
 <!-- /TOC -->
 
@@ -589,6 +590,49 @@ tp.getWallets().then(console.log)
     msg: 'success'
 }
 ```
+
+#### 2.8 tp.sign
+
+```javascript
+tp.sign(params)
+```
+
+##### Parameters
+
+`params`- `Object`:
+- `appid`: `String`
+
+
+##### Returns
+
+`Object`:
+- `result`: `Boolean`
+- `data`: `Object`
+    - `deviceId` : `Stirng`
+    - `appid` : `String`
+    - `timestamp` : `Number`
+    - `sign` : `String`
+- `msg`: `String`
+
+##### Example
+
+```javascript
+tp.sign({
+    appid: 'swEmwEQ666'
+}).then(console.log)
+
+> {
+    result: true,
+    data: {
+        deviceId: 'EBEFWA-AFEBEf-eeee-aaaaa-eeeeea23d',
+        appid: 'swEmwEQ666',
+        timestamp: 1534735280,
+        sign: '713efewwfegwohvnqooyge38h4n421ll3fwzib9e3q00'
+    },
+    msg: 'success'
+}
+```
+
 
 
 
