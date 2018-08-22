@@ -895,6 +895,7 @@ var _getCallbackName = function() {
 
 
 var _sendTpRequest = function(methodName, params, callback) {
+    // android
     if (window.TPJSBrigeClient) {
         window.TPJSBrigeClient.callMessage(methodName, params, callback);
     }
@@ -905,7 +906,7 @@ var _sendTpRequest = function(methodName, params, callback) {
 }
 
 var tp = {
-    version: '1.0.1',
+    version: '1.0.3',
     isConnected: function() {
         return !!(window.TPJSBrigeClient || (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.getDeviceId));
     },
@@ -1042,7 +1043,24 @@ var tp = {
             _sendTpRequest('getCurrentWallet', '', tpCallbackFun);
         });
     },
+    sign: function(params) {
 
+        return new Promise(function(resolve, reject) {
+            var tpCallbackFun = _getCallbackName();
+
+            window[tpCallbackFun] = function(result) {
+                result = result.replace(/\r/ig, "").replace(/\n/ig, "");
+                try {
+                    var res = JSON.parse(result);
+                    resolve(res);
+                } catch (e) {
+                    reject(e);
+                }
+            }
+
+            _sendTpRequest('sign', JSON.stringify(params), tpCallbackFun);
+        });
+    },
     // enu
     enuTokenTransfer: function(params) {
         // 必填项
