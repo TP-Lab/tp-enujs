@@ -26,12 +26,9 @@ npm install tp-enujs
 
 ## Usage
 
-请在TokenPocket中使用该SDK。
-通过 APP中 关于我们->点击logo 8次开启 开发者模式，开启后可以在 发现-> Dapp Store 添加自定义URL
+请在TokenPocket中使用该SDK。 请在发现 -> DApp浏览器中 开发调试
 
-Open your site in TokenPocket as a Dapp.
-In About Page, click the logo 8 times to open the develop mode. Then you can add your url in Dapp Store.
-
+Open your site in TokenPocket as a Dapp. Develope and test in Discover -> DappBrowser.
 
 Npm
 ```javascript
